@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.FoodFragment">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/tv_foods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/ADD"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="ADD"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_foods" />
+
+<Button
+    android:id="@+id/Remove"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="Remove"
+    app:layout_constraintEnd_toStartOf="@+id/ADD"
+    app:layout_constraintTop_toBottomOf="@+id/tv_foods" />
+
+<Button
+    android:id="@+id/positionButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="R.Byposition"
+    app:layout_constraintEnd_toStartOf="@+id/Remove"
+    app:layout_constraintTop_toBottomOf="@+id/tv_foods" />
+
+<EditText
+    android:id="@+id/positionText"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:ems="10"
+    android:hint="no.remove"
+    android:inputType="number"
+    android:textAlignment="center"
+    android:textSize="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/positionButton"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_foods" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
