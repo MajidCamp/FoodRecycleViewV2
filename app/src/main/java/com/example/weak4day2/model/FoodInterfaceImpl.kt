@@ -18,16 +18,18 @@ class FoodInterfaceImpl:FoodInterface {
         Foods("Food9", R.drawable.baseline_fastfood_24),
 
         )
-    override fun getFoodList(): List<Foods>{
+    override fun getFoodList(): MutableList<Foods>{
         return namesList
     }
     override fun removeItem() {
         namesList.removeLast()
-
+    }
+    override fun addItem() {
+        namesList.add(1,Foods(strings2.random(),R.drawable.baseline_catching_pokemon_24))
     }
 
-    override fun addItem() {
-        namesList.add(0,namesList.random())
+    override fun removeByIndex(x:Int) {
+            namesList.removeAt(x)
 
     }
 }

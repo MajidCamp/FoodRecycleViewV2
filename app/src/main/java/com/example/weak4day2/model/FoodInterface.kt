@@ -6,6 +6,7 @@ interface FoodInterface {
     fun getFoodList(): List<Foods>
     fun removeItem()
     fun addItem()
+    fun removeByIndex(x:Int)
 
 
 }

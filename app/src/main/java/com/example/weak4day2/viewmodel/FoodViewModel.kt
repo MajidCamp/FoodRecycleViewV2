@@ -20,5 +20,16 @@ class FoodViewModel :ViewModel(){
         _foodList.value=foodinterface.getFoodList()
     }
 
+    fun add(){
+        foodinterface.addItem()
+    }
+
+    fun remove(){
+        foodinterface.removeItem()
+    }
+    fun removeIndex(x:Int){
+        foodinterface.removeByIndex(x)
+    }
+
 
 }
